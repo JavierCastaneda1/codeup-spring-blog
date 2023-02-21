@@ -3,6 +3,7 @@ package com.codeup.codeupspringblog;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -11,7 +12,7 @@ public class PostController {
     @GetMapping("/posts")
     @ResponseBody
     public String index() {
-        return "This is the posts index page";
+        return "This is the posts index page!";
     }
 
     @GetMapping("/posts/{id}")
@@ -25,6 +26,11 @@ public class PostController {
     public String createForm(){
         return "FORM FOR CREATING POST GOES HERE";
     }
+
+//    @PostMapping("/posts/create")
+//    public String createPost() {
+//        //Something happens here to store a post for later
+//    }
 
 
 
