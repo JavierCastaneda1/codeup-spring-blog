@@ -11,13 +11,13 @@ public class PostController {
     @GetMapping("/posts")
     @ResponseBody
     public String postsHome() {
-        return "posts index page";
+        return "posts HOME page";
     }
 
     @GetMapping("/posts/{id}")
     @ResponseBody
     public String postsHome(@PathVariable long id) {
-        return "viewing post at id " + id;
+        return "viewing post of id " + id;
     }
 
     @GetMapping("/posts/create")
