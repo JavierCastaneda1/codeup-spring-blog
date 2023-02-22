@@ -1,4 +1,4 @@
-package com.codeup.codeupspringblog;
+package com.codeup.codeupspringblog.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,30 +8,28 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class PostController {
-
     @GetMapping("/posts")
     @ResponseBody
-    public String index() {
-        return "This is the posts index page!";
+    public String postsHome() {
+        return "posts index page";
     }
 
     @GetMapping("/posts/{id}")
     @ResponseBody
-    public String view(@PathVariable String id) {
-        return "Viewing posts with the ID of " + id;
+    public String postsHome(@PathVariable long id) {
+        return "viewing post at id " + id;
     }
 
     @GetMapping("/posts/create")
     @ResponseBody
-    public String createForm(){
-        return "FORM FOR CREATING POST GOES HERE";
+    public String postsForm() {
+        return "And this is where the form for creating a post would go... IF WE HAD ONE!";
     }
 
-//    @PostMapping("/posts/create")
-//    public String createPost() {
-//        //Something happens here to store a post for later
-//    }
-
+    @PostMapping("/posts/create")
+    public void createPost() {
+        //Something happens here to store a post for later ;)
+    }
 
 
 }
