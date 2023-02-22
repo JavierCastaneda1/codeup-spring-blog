@@ -16,7 +16,7 @@ public class PostController {
 
     @GetMapping("/posts/{id}")
     @ResponseBody
-    public String postsHome(@PathVariable long id) {
+    public String singlePost(@PathVariable long id) {
         return "viewing post of id " + id;
     }
 
@@ -27,8 +27,8 @@ public class PostController {
     }
 
     @PostMapping("/posts/create")
-    public void createPost() {
-        //Something happens here to store a post for later ;)
+    public String createPost() {
+        return "form for create post goes here";
     }
 
 
